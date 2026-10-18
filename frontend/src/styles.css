@@ -1,0 +1,343 @@
+:root {
+  color: #171717;
+  background: #f7f7f5;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.landing-shell,
+.recommendations-shell {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.landing-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.landing-panel {
+  width: min(100%, 680px);
+}
+
+.product-label,
+.action-type {
+  margin: 0 0 12px;
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #111827;
+  font-size: clamp(2.3rem, 8vw, 5rem);
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 0.98;
+}
+
+.landing-subheadline {
+  max-width: 560px;
+  margin: 24px 0 32px;
+  color: #4b5563;
+  font-size: 1.15rem;
+}
+
+.primary-button,
+.secondary-button,
+.details-button {
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 650;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.primary-button {
+  padding: 0 18px;
+  background: #111827;
+  color: #ffffff;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #0f766e;
+}
+
+.primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.primary-button.compact {
+  min-height: 40px;
+}
+
+.secondary-button,
+.details-button {
+  background: #ffffff;
+  color: #374151;
+  border-color: #d9d9d6;
+}
+
+.secondary-button {
+  padding: 0 14px;
+}
+
+.details-button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.secondary-button:hover,
+.details-button:hover {
+  border-color: #9ca3af;
+  color: #111827;
+}
+
+.recommendations-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.recommendations-header h1 {
+  max-width: 680px;
+  font-size: clamp(2rem, 6vw, 3.7rem);
+}
+
+.recommendations-list {
+  display: grid;
+  gap: 14px;
+}
+
+.recommendation-card,
+.status-panel {
+  border: 1px solid #e3e3df;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgb(17 24 39 / 4%);
+}
+
+.recommendation-card {
+  padding: 22px;
+}
+
+.card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.priority-badge,
+.confidence-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 0 10px;
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.priority-badge.high {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.priority-badge.medium {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.priority-badge.low {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.confidence-pill {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.product-name {
+  margin: 0 0 4px;
+  color: #111827;
+  font-size: 1.15rem;
+  font-weight: 720;
+}
+
+.action-type {
+  margin-bottom: 10px;
+}
+
+.card-main h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.28rem;
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.why-text {
+  max-width: 680px;
+  margin: 10px 0 0;
+  color: #4b5563;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #eeeeeb;
+}
+
+.metrics-grid div {
+  min-width: 0;
+}
+
+.metrics-grid dt {
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.metrics-grid dd {
+  margin: 3px 0 0;
+  color: #111827;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-message {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.analysis-loading {
+  display: grid;
+  min-height: 240px;
+  align-content: center;
+  justify-items: center;
+  color: #4b5563;
+}
+
+.analysis-loading p {
+  margin: 0;
+}
+
+.status-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+}
+
+.status-panel p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.loading-bar-container {
+  width: 280px;
+  max-width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.loading-bar {
+  width: 40%;
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 999px;
+  animation: loading 1.2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+@media (max-width: 720px) {
+  .landing-shell,
+  .recommendations-shell {
+    padding: 28px 16px;
+  }
+
+  .recommendations-header,
+  .card-topline,
+  .status-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .secondary-button {
+    width: fit-content;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    padding: 18px;
+  }
+}
