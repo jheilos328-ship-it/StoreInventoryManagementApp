@@ -10,7 +10,7 @@ How it works
 
 - Identifies issues across the dataset, such as dead stock, overstock, or products running out of stock using math formulas
 - Scores and ranks issues with a scoring system to rank and prioritize which decisions need to be made first
-- Uses AI (In this version, ollama3.2) to generate readable summaries and descriptions of the problem and how to fix it
+- Uses AI (In this version, Llama3.2) to generate readable summaries and descriptions of the problem and how to fix it
 - Important: The AI does not decide what decisions must be made - the scoring system creates and prioritizes them, while the AI makes the readable summaries to ensure reliability and consistency
 
 
